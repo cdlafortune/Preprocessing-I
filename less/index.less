@@ -61,59 +61,149 @@ html, body {
 
 /* Variables */
 @mobile: ~"only screen and (max-width: 500px)";
-@tablet: ~" only screen and (max-width: 800px)";
 @darkBlue: #003366;
 @gray: #676767;
 @white: #ffffff;
 @arial: ~"Arial, sans-serif";
+@med-font: 1.5em;
+@lg-font: 2.5em;
 
 /* Mixins */
 
-.flex-col {
+.flex-row {
 	display: flex;
-	flex-flow: column wrap;
-	justify-content: space-between;
+	flex-flow: row wrap;
 	align-items: center;
 }
 
 body {
 	font-family: @arial;
 	h2 {
-		font-size: 2.5em;
+		font-size: @lg-font;
 		color: @darkBlue;
 	}
 
 	header {
-		width: 40%;
-		
+		width: 100%;
 
 		nav {
-			background-color: @darkBlue;
-			width: 10%;
-			height: 100%;
+			width: 100%;
 			position: fixed;
-			z-index: 1;
 			top: 0;
-			left: 0;
-			overflow-x: hidden;
-			padding-top: 2%;
+			background-color: @darkBlue;
 		}
 
 		nav a {
 			text-decoration: none;
+			justify-content: space-between;
 			color:@white;
-			font-size: 1.5em;
-			.flex-col();
-			padding: 10%;
+			font-size: @med-font;
+			padding: 1% 10%;
 		}
 
-		h1 {
-			font-size: 4em;
-			color: @white;
-			text-align: center;
-			margin-top: 3%;
+		nav a:hover {
+			color: @gray;
 		}
 	} //closes header
 
+	#intro {
+		padding: 5%;
+
+		h1 {
+			font-size: 4em;
+			color: @darkBlue;
+			text-align: center;
+			margin-top: 3%;
+		}
+
+		p {
+			font-size: @med-font;
+			text-align: center;
+		}
+	} //closes intro
+
+	#skills {
+		padding: 5%;
+		background-color: @gray;
+		color: @white;
+
+		li {
+			font-size: @med-font;
+			list-style-type: square;
+			padding: 2%;
+		}
+
+
+	} //closes skills
+
+	#projects {
+		font-size: @med-font;
+		padding: 5%;
+		line-height: 1.5;
+
+		h3 {
+			font-size: 1.75em;
+		}
+
+		h4 {
+			font-weight: bold;
+			font-size: 1.6em;
+		}
+
+	} //closes projects
+
+	#contact {
+
+		padding: 5%;
+		line-height: 2;
+
+		h2 {
+			font-size: @lg-font;
+		}
+
+		p {
+			font-size: @med-font;
+		}
+
+
+		.social-links {
+			width: 50%;
+			margin: 0 auto;
+			.flex-row();
+			justify-content: center;
+
+			a {
+				font-size: @med-font;
+				padding: 5%;
+			}
+	
+			img {
+				height: 2em;
+				width: 2em;
+			}
+		} 
+		
+	} //closes contact
+
+	@media @mobile {
+		nav {
+			flex-flow: column wrap;
+			justify-content: center;
+			align-items: space-evenly;
+			width: 100%;
+			height: auto;
+		}
+
+		#intro {
+			margin-top: 15%;
+		}
+
+		#skills {
+			width: 100%;
+			margin: 0 auto;
+		}
+
+
+	}
 	
 } //closes body
