@@ -1,0 +1,320 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  font-size: 10px;
+}
+/* Variables */
+/* Mixins */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+body h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5rem;
+  color: #003366;
+}
+body header {
+  width: 100%;
+  background-color: #003366;
+  position: fixed;
+  top: 0;
+  opacity: 0.6;
+  margin-bottom: 5%;
+}
+@media only screen and (max-width: 500px) {
+  body header {
+    position: relative;
+  }
+}
+body header nav {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 500px) {
+  body header nav {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+body header nav img {
+  width: 5rem;
+  height: 5rem;
+}
+@media only screen and (max-width: 500px) {
+  body header nav img {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+body header nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  padding: 2% 0;
+}
+body header nav a:hover {
+  color: #676767;
+}
+body #intro {
+  padding: 5%;
+}
+body #intro h1 {
+  font-size: 4rem;
+  color: #003366;
+  text-align: center;
+  margin-top: 3%;
+  font-family: 'Roboto', sans-serif;
+}
+body #intro p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+body #skills {
+  padding: 5% 0;
+  background-color: #676767;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  line-height: 2;
+  border-top: 2px dashed #003366;
+  border-bottom: 2px dashed #003366;
+}
+@media only screen and (max-width: 500px) {
+  body #skills {
+    flex-direction: column;
+    align-content: center;
+  }
+}
+body #skills .skills-txt {
+  width: 40%;
+  justify-content: flex-start;
+  padding: 0 5%;
+}
+@media only screen and (max-width: 500px) {
+  body #skills .skills-txt {
+    margin: 0 auto;
+    justify-content: center;
+  }
+}
+body #skills li {
+  font-size: 1.5rem;
+  list-style-type: square;
+  margin-left: 10%;
+}
+body #skills .skills-img {
+  justify-content: flex-end;
+  width: 40%;
+}
+@media only screen and (max-width: 500px) {
+  body #skills .skills-img {
+    display: none;
+  }
+}
+body #skills .skills-img img {
+  border-radius: 50%;
+  width: 50rem;
+  height: 50rem;
+}
+body #projects {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #676767;
+  font-size: 1.5rem;
+  padding: 5%;
+  color: #ffffff;
+  line-height: 2;
+  width: 100%;
+  border-bottom: 2px dashed #003366;
+}
+body #projects h3 {
+  font-size: 1.75rem;
+  font-family: 'Roboto', sans-serif;
+}
+body #projects h4 {
+  font-weight: bold;
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+}
+body #projects a {
+  color: #92FCF6;
+}
+body #contact {
+  padding: 5%;
+  line-height: 2;
+}
+body #contact h2 {
+  font-size: 2.5rem;
+  font-family: 'Roboto', sans-serif;
+}
+body #contact p {
+  font-size: 1.5rem;
+}
+body #contact .social-links {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+body #contact .social-links a {
+  font-size: 1.5rem;
+  padding: 5%;
+}
+@media only screen and (max-width: 500px) {
+  body #contact .social-links a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+body #contact .social-links img {
+  height: 2em;
+  width: 2em;
+}
